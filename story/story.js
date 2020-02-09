@@ -42,7 +42,7 @@ function handleNumber(number){
 	
 	 
 	 var name=document.createElement("input"); 
-     name.value ="  ";
+     name.value ="";
      name.type = "text" ; 
      name.id = "name"+(storyNumber+1)+ characterNumber[storyNumber];
      app[storyNumber].appendChild(name);
@@ -69,14 +69,15 @@ function handleNumber(number){
 function handleTask(number){
 	
 	var storyNumber = number -1;
-	
+	var tmp="";
 	for (var i = 1; i <characterNumber[storyNumber] +1; i++){
 	  var nameID = 'name'+(storyNumber+1)+i;
 	  var descriptionID = 'description'+(storyNumber+1)+i;
 	  var nameValue = document.getElementById(nameID).value;
+	  tmp = tmp + nameValue;
 	  var descriptionValue = document.getElementById(descriptionID).value;
 	  if (nameValue.length == 0){
-		  alert('Please input the name of character_'+ characterNumber[storyNumber]);
+		  alert('Please input the name of character_'+ i);
 		  return;
 	 }
 	 
@@ -91,14 +92,14 @@ function handleTask(number){
             }
 	 
 	 if ( length<= 30){
-		  alert('The description of character_'+ characterNumber[storyNumber] + ' has min 30 words');
+		  alert('The description of character_'+ i + ' has min 30 words');
 		  return;
 	 }
 	
 	}
 	
 	var message=document.createElement('p');
-    message.textContent = "You have finished the task of story"+ (storyNumber+1);
+    message.textContent = "You have finished the task of story"+ (storyNumber+1) + " " + tmp;
     app[storyNumber].appendChild(message);
 }
 
