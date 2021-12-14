@@ -17,7 +17,7 @@ body {
   margin-left: 6%;
   margin-right:6%;
   display: grid;
-  grid-template-rows: 4em 3.5em 20px [main-start] 300px  70px 70px auto [main-end]  20px 3em ;
+  grid-template-rows: 4em 3.5em 20px [main-start] 300px  70px 80px auto [main-end]  20px 3em ;
   grid-template-columns: [main-start] 1fr [main-end] 20px 360px 60px 
 }
 
