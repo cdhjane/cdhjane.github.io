@@ -17,7 +17,7 @@ body {
   margin-left: 6%;
   margin-right:6%;
   display: grid;
-  grid-template-rows: 4em 3.5em 20px [main-start] 300px  70px auto [main-end]  20px 5em ;
+  grid-template-rows: 4em 3.5em 20px [main-start] 300px  70px 70px auto [main-end]  20px 3em ;
   grid-template-columns: [main-start] 1fr [main-end] 20px 360px 60px 
 }
 
@@ -40,7 +40,7 @@ Header {
   grid-area: 5/ 3 / 6 / 4;
 }
 #tarticle {
-  grid-area: 6 / 3 / 7 / 4;
+  grid-area: 6 / 3 /7/ 4;
 } 
 
 /* VISUAL STYLES START HERE */
@@ -108,7 +108,6 @@ main {
 }
 
 
-
 figure {
   margin: 0;
   padding: 0;  
@@ -120,7 +119,7 @@ footer {
   text-align: center;
   font-size: .8em;
   padding: .5em;
-  grid-row: 8 / 9;
+  grid-row: 9 / 9;
   grid-column: 1 / -1;
 }
 
@@ -150,9 +149,12 @@ th, td {
   font-size: 18px;
   font-weight: 400;
   padding: 5px;
-  text-align: left;
+  text-align: left
+  
   width: 33.3333%;
+ 
 }
+
 
 /* articles styles */
                                           
@@ -165,7 +167,7 @@ th, td {
 }
 #game_block1,#game_block2,#game_block3 {
             white-space: pre-line;
-            max-height: 500px;
+            max-height: 400px;
             overflow-y: scroll;
             border: 1px solid rgba(0, 0, 0, 0.2);
             padding: 10px;
